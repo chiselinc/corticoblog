@@ -1,0 +1,90 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Jekyll template variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Cortico typography variables
+$cortico-font-primary: 'Montserrat', sans-serif;
+$cortico-font-secondary: 'Rubik', sans-serif;
+
+$cortico-headline-font: $cortico-font-primary;
+$cortico-subheadlines-font: $cortico-font-secondary;
+$cortico-body-font: $cortico-font-secondary;
+
+// Jekyll font size and space variables
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+// Jekyll color variables
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Cortico color variables 
+
+// cta
+$cortico-subtitle: #4D4E54;
+$cortico-cta: #f4a414;
+
+// black/gray variations
+$cortico-white: white;
+$cortico-dark-gray: #323337;
+
+// yellow variations
+$cortico-yellow: #fdfc66;
+$cortico-light-yellow: #fff9f1;
+
+//text
+$cortico-text-medium: #595959;
+
+// blue variations
+$cortico-primary: #4B54F6;
+$cortico-dark-blue: #0f16a6;
+$cortico-mid-blue: #2b76d9;
+$cortico-light-blue: #08b8fd;
+$cortico-lighter-blue: #c2e2ea;
+$cortico-blue: #00ffff;
+$cortico-lighter-blue: #00ffff;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
