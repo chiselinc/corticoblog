@@ -1,3 +1,22 @@
+@import './colors.scss';
+@import './typography.scss';
+
+
+$cortico-site-width: 1050px;
+
+
+// variable scss
+@import "variables";
+
+// mixin scss
+//@import "mixins";
+//@import "extends";
+// default scss
+//@import "common";
+
+// body scss
+@import "menu";
+
 /**
  * Reset some basic elements
  */
@@ -204,3 +223,4 @@ pre {
         }
     }
 }
+
